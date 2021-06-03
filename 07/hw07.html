@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw07</title>
+    <style>
+        .con{
+            display: flex;
+            margin: 0 auto;
+        }
+        @media screen and (min-width:1200px){
+            .con div{
+                flex-grow: 1;
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1200px){
+           .con{
+               flex-wrap: wrap;
+           }
+           .con div:nth-child(1){
+               width: 100%;
+           }
+           .con div:nth-child(2),.con div:nth-child(3),.con div:nth-child(4){
+               flex-grow: 1;
+           }
+        }
+        @media screen and (min-width:768px) and (max-width:992px){
+           .con{
+               flex-wrap: wrap;
+           }
+           .con div:nth-child(1),.con div:nth-child(2){
+               flex-grow: 1;
+           }
+           .con div:nth-child(3),.con div:nth-child(4){
+               flex-grow: 1;
+           }
+        }
+        @media screen and (max-width:768px){
+            .con{
+                flex-direction: column;
+            }
+            .con div{
+               width: 100%;
+            }
+        }
+        .con div:nth-child(1){
+            background: red;
+        }
+        .con div:nth-child(2){
+            background:blue;
+        }
+        .con div:nth-child(3){
+            background:black;
+        }
+        .con div:nth-child(4){
+            background:orange;
+        }
+        .con div{
+            color: white;
+            line-height: 60px;
+            text-align: center;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
