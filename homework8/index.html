@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .top{
+          background-color: black;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          color: white;
+      }
+      .text1{
+          color: yellowgreen;
+          font-size: 19px;
+      }
+      .text2{
+          color: gray;
+          font-size: 15px;
+          margin-left: -30px;
+      }
+      .text3{
+          color: white;
+
+          font-size: 15px;
+      }
+      .logo{
+          height: 100%;
+          width: 90px;
+      }
+      #homePage{
+          color: orange;
+          font-size: 19px;
+      }
+      .image1{
+          background-image: url(./images/tubiao.png);
+          background-position: -230px -25px;
+          background-repeat: no-repeat;
+          width: 16px;
+          height: 16px;
+      }
+      .searchArea{
+          background-image: url(./images/search.png);
+          background-repeat: no-repeat;
+          width: 200px;
+          height: 30px;
+          color: black;
+          font-size: 12px;
+          line-height: 27px;
+      }
+      .below{
+          width: 100%;
+          height: 600px;
+          display: flex;
+          border-bottom: 2px solid gray;
+      }
+      .geci{
+          display: flex;
+          flex-grow: 7;
+          flex-direction: column;
+      }
+      .postArea{
+          flex-grow: 5;
+          display: flex;
+          flex-direction: column;
+      }
+      .geciTitle{
+          width: 100%;
+          flex-grow: 3;
+          border-bottom: 2px solid gray;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+      #bigTitle{
+          font-size: 25px;
+          color: black;
+          font-weight: bold;
+          text-align: center;
+      }
+      #subTitle1{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      #subTitle1 p{
+          font-size: 13px;
+      }
+      .gold{
+          color: orange;
+      }
+      .subTitle2{
+          font-size: 13px;
+          color: black;
+          text-align: center;
+      }
+      .commetImage{
+          width: 14px;
+          height: 14px;
+          background-image: url(./images/2.jpg);
+          
+      }
+      .gc{
+          width: 100%;
+          flex-grow: 7;
+          display: flex;
+          justify-content: flex-end;
+      }
+      .scrollBar{
+          margin-top: 5%;
+          flex-grow: 1;
+          height: 100px;
+          border-radius: 20%;
+          background-color:gray;
+      }
+      .gc1{
+          flex-grow: 99;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          align-items: stretch;
+          font-size: 15px;
+      }
+      .gc1 p{
+          margin-top: 0px;
+      }
+      .round{
+          flex-grow: 3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .progressBarArea{
+          flex-grow: 2;
+          display: flex;
+          flex-direction: column;
+      }
+      .roundImage{
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          background-image: url(./images/1.jpg);
+          transform: scale(1.3,1.3);
+    }
+      .roundImage1{
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          background-image: url(./images/1.jpg);
+          animation-name: rr;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+    }
+    @keyframes rr{
+            0%{
+		          
+		           transform: rotate(0deg) scale(1.3,1.3);
+		    }
+		    100%{
+		           transform: rotate(360deg) scale(1.3,1.3);
+		    }
+    }
+       .processBar{
+           width: 100%;
+           flex-grow: 2;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .xz{
+           width: 100%;
+           flex-grow: 3;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .xz1{
+           background-image: url(./images/tubiao1.jpg);
+           background-position: 0 -47px;
+           width: 200px;
+           height: 40px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .xz1 p{
+           font-size: 16px;
+           color: black;
+       }
+       .xz2{
+           width: 19px;
+           height: 16px;
+           background-image: url(./images/tubiao1.jpg);
+       }
+       #playorsuspend{
+           width: 50px;
+           height: 40px;
+           background-image: url(./images/tubiao1.jpg);
+           background-position: -200px -48px;
+       }
+       #Bar{
+           width: 250px;
+           height: 5px;
+           background-color: gray;
+       }
+       #yellowBar{
+           height: 100%;
+           width: 12px;
+           background-color: yellow;
+           display: flex;
+           flex-direction: row-reverse;
+           align-items: center;
+       }
+       #yellowBtn{
+           width: 12px;
+           height: 10px;
+           background-position: -20px 0px;
+           background-image: url(./images/tubiao1.jpg);
+       }
+       #time{
+           width: 35px;
+           height: 25px;
+           font-size: 12px;
+           color: rgb(186, 189, 203);
+           margin-top: 5px;
+       }
+       #mute{
+           width: 27px;
+           height: 20px;
+           background-image: url(./images/tubiao1.jpg);
+           background-position: -42px 0px;
+       }
+       .commetArea{
+           width: 650px;
+           height: 550px;
+           display: flex;
+           flex-direction: column;
+           margin: 0 auto;
+       }
+       .area1{
+           flex-grow: 1;
+           display: flex;
+           align-items: center;
+       }
+       .area2{
+           flex-grow: 4;
+        }
+       .area3{
+           flex-grow: 7;
+        }
+        .area4{
+            flex-grow: 2;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .bottom1{
+            margin-left: 25px;
+        }
+        .bButton1{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: orange;
+            text-align: center;
+            color: white;
+            margin-left: 25px;
+        }
+        .bButton2{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: gainsboro;
+            text-align: center;
+            color: black;
+            margin-left: 25px;
+        }
+        .input1{
+            width: 1300px;
+            height: 80px;
+            float: left;
+            margin-left: 5px;
+        }
+        .input1::placeholder{
+            vertical-align: top;
+        }
+        .submit{
+            background-color: orange;
+            color: white;
+            float: right;
+        }
+        .addDiv{
+            background-color: red
+        }
+    </style>
+</head>
+<body>
+    <audio src="./images/01.mp3"  autoplay="autoplay" id="myMusic"></audio>
+    <div class="top">
+        <img class="logo" src="./images/logo.jpg" />
+        <p id="homePage">首页</p>
+        <p class="text1">榜单</p>
+        <p class="text1">歌手</p>
+        <p class="text1">下载酷我音乐端</p>
+        <div class="image1"></div>
+        <p class="text2">美女秀</p>
+        <div class="image1"></div>
+        <p class="text2">酷我耳机</p>
+        <div class="image1"></div>
+        <p class="text2">VIP会员</p>
+        <div class="image1"></div>
+        <p class="text2">i听</p>
+        <p class="text3">更多服务</p>
+        <p class="text3">登录</p>
+        <p class="text3">^</p>
+        <div class="searchArea">&nbsp&nbsp&nbsp找到好音乐</div>
+    </div>
+    <div class="below">
+       <div class="geci">
+           <div class="geciTitle">
+               <p id="bigTitle">喜羊羊</p>
+               <div id="subTitle1">
+                   <p>专辑：</p>
+                   <p class="gold">儿歌大全</p>
+                   <p>&nbsp&nbsp&nbsp歌手：</p>
+                   <p class="gold">华语群星</p>
+                   <p>&nbsp&nbsp&nbsp分享&nbsp&nbsp&nbsp</p>
+                   <div class="commetImage"></div>
+                   <p class="gold">&nbsp评论</p>
+               </div>
+               <p class="subTitle2">上传时间：2015-10-02 歌曲来源：民大相思湖网球社</p>
+           </div>
+           <div class="gc">
+                <div class="gc1">
+                    <p>白云因为我变得柔软</p>
+                    <p>别看我只是一只羊</p>
+                    <p>羊儿的聪明难以想象</p>
+                    <p>天再高心情一样奔放</p>
+                    <p>每天都追赶太阳</p>
+                    <p  style="color: orange;font-size: 20px;">有什么难题 去牵绊我 都不会去心伤</p>
+                    <p>有什么危险 在我面前 也不会去慌乱</p>
+                    <p>就像有狼群 把我追捕 也当做游戏一场</p>
+                    <p>在什么时间 都爱开心 笑容都会飞翔</p>
+                    <p>就算会摔倒 站了起来 永远不会沮丧</p>
+                    <p>在所有天气 拥有叫人 大笑的力量</p>
+                    <p>虽然我只是只羊</p>
+                </div>
+               <div class="scrollBar"></div>
+           </div>
+       </div>
+       <div class="postArea">
+           <div class="round">
+               <div id="roundImage" class="roundImage1"></div>
+           </div>
+           <div class="progressBarArea">
+                <div class="processBar">
+                    <div id="playorsuspend"></div>
+                    <div id="Bar">
+                        <div id="yellowBar">
+                            <div id="yellowBtn"></div>
+                        </div>
+                    </div>
+                    <div id="time">00:00</div>
+                    <div id="mute"></div>
+                </div>
+                <div class="xz">
+                    <div class="xz1">
+                        <div class="xz2"></div>
+                        <p>&nbsp免费下载这首歌</p>
+                    </div>
+                </div>
+           </div>
+       </div>
+    </div>
+    <div class="commetArea">
+        <div class="area1">
+            <img src="./images/1.jpg" style="height:85px;width:85px">
+            <textarea  id="input1" class="input1" type="text"  placeholder="分享你的见解" ></textarea>
+        </div>
+        <div class="area2" >
+            <img src="./images/2.jpg" style="float: left">
+            <button id="submit" class="submit" type="submit" onclick="saveStorage('input1')" > 评论</button>
+            <p style="float: right;margin-top: 5px;font-size: 12px;">已输入 个字</p>
+        </div>
+        <div class="area3" style="height:380px;border:1px solid gray">
+            <table id="p1" >
+            </table>
+        </div>
+        <div class="area4">
+            <div id="btm1" class="bButton2" onclick="changeStatus(this)">&lt</div>
+            <div id="btm2" class="bButton1" onclick="changeStatus(this)">1</div>
+            <div id="btm3" class="bButton2" onclick="changeStatus(this)">2</div>
+            <div id="btm4" class="bButton2" onclick="changeStatus(this)">3</div>
+            <p class="bottom1">...</p>
+            <div id="btm5" class="bButton2" onclick="changeStatus(this)">17</div>
+            <div id="btm6" class="bButton2" onclick="changeStatus(this)">&gt</div>
+        </div>
+    </div>
+</body>
+<script src="./node_modules/moment/moment.js"></script>
+<script src="./index.js"></script>
+</html>
